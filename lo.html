@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enroll Lost & Found | CampusKart</title>
+  <link rel="stylesheet" href="lo.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Report Lost or Found Item</h2>
+    <form>
+      <label for="type">Item Type:</label>
+      <select id="type" name="type" required>
+        <option value="">--Select Type--</option>
+        <option value="Lost">Lost</option>
+        <option value="Found">Found</option>
+      </select>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">--Select Category--</option>
+        <option value="Books/Notebooks">Books/Notebooks</option>
+        <option value="ID Card">ID Card</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Wallet/Purse">Wallet/Purse</option>
+        <option value="Clothing/Accessories">Clothing/Accessories</option>
+        <option value="Stationery">Stationery</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <label for="title">Item Name/Title:</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Black Wallet, Physics Notebook" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" placeholder="Brief details about the item, where it was lost/found..." rows="4" required></textarea>
+
+      <label for="date">Date Lost/Found:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="location">Last Seen / Found At:</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Library, Cafeteria" required />
+
+      <label for="image">Upload Photo (optional):</label>
+      <input type="file" id="image" name="image" accept="image/*" />
+
+      <label for="contact">Your Email/Phone:</label>
+      <input type="text" id="contact" name="contact" placeholder="To be contacted if matched" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

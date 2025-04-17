@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enroll - Buy/Sell Item | CampusKart</title>
+  <link rel="stylesheet" href="buysell.css">
+</head>
+<body>
+  <div class="container">
+    <h2>List Your Item on CampusKart</h2>
+    <form>
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">--Select Category--</option>
+        <option value="Books">Books</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Cycle">Cycle</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <label for="title">Item Title:</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Scientific Calculator" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" placeholder="Add a short description..." rows="4" required></textarea>
+
+      <label for="price">Price (₹):</label>
+      <input type="number" id="price" name="price" required>
+
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <label for="contact">Your Email/Phone:</label>
+      <input type="text" id="contact" name="contact" placeholder="Contact info for buyers" required>
+
+      <button type="submit">Enroll Item</button>
+    </form>
+  </div>
+</body>
+</html>

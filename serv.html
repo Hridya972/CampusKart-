@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enroll Service | CampusKart</title>
+  <link rel="stylesheet" href="serv.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Offer Your Service on CampusKart</h2>
+    <form>
+      <label for="category">Service Category:</label>
+      <select id="category" name="category" required>
+        <option value="">--Select Category--</option>
+        <option value="Tutoring">Tutoring</option>
+        <option value="Assignments Help">Assignments Help</option>
+        <option value="Part-Time Jobs">Part-Time Jobs</option>
+        <option value="Tech Support">Tech Support</option>
+        <option value="Design Services">Design Services</option>
+        <option value="Resume Writing">Resume Writing</option>
+        <option value="Photography/Videography">Photography/Videography</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <label for="title">Service Title:</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Math Tutoring for 1st Year" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" placeholder="Describe your service in detail..." rows="4" required></textarea>
+
+      <label for="rate">Rate (₹ per hour / per task):</label>
+      <input type="number" id="rate" name="rate" required>
+
+      <label for="availability">Availability:</label>
+      <input type="text" id="availability" name="availability" placeholder="e.g. Evenings, Weekends" required>
+
+      <label for="image">Upload Sample/Thumbnail (optional):</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <label for="contact">Your Email/Phone:</label>
+      <input type="text" id="contact" name="contact" placeholder="Contact info for interested users" required>
+
+      <button type="submit">Enroll Service</button>
+    </form>
+  </div>
+</body>
+</html>
