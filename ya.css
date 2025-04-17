@@ -1,0 +1,54 @@
+.flipping-tip {
+    background: #938bca;
+    border-left: 6px solid #4b0b9d;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #444;
+  }
+  
+  .flipping-tip i {
+    margin-right: 10px;
+    color: #f5be3e;
+    font-size: 1.2em;
+  }
+  
+  .flip-btn {
+    background-color: #472fb0;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .flip-btn:hover {
+    background-color: #80afee;
+  }
+  
+  .range {
+    font-weight: bold;
+    color: #4c2cab;
+    font-size: 0.9em;
+  }
+  
+  .listing-count {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: -8px;
+    margin-bottom: 12px;
+  }
+  
+  .premium-seller .icon {
+    color: #9b59b6;
+  }
+  
+  .trending {
+    border: 2px dashed #df786d;
+  }
+  
