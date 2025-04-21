@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page</title>
+  <title>Login</title>
   <style>
     body {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #9face6);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,7 +15,7 @@
       margin: 0;
     }
 
-    .login-box {
+    .form-box {
       background: white;
       padding: 40px;
       border-radius: 12px;
@@ -24,65 +24,66 @@
       max-width: 360px;
     }
 
-    .login-box h2 {
+    h2 {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
+    input {
       width: 100%;
       padding: 12px;
-      margin: 10px 0 20px 0;
+      margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 8px;
-      box-sizing: border-box;
     }
 
-    .login-box button {
+    button {
       width: 100%;
       padding: 12px;
-      background-color: #6C63FF;
+      background: #0072ff;
       color: white;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
       font-size: 16px;
+      cursor: pointer;
     }
 
-    .login-box button:hover {
-      background-color: #574b90;
+    button:hover {
+      background: #005ccc;
     }
 
-    .login-box .signup-link {
-      text-align: center;
-      margin-top: 16px;
+    .error {
+      color: red;
       font-size: 14px;
-    }
-
-    .login-box .signup-link a {
-      color: #6C63FF;
-      text-decoration: none;
-    }
-
-    .login-box .signup-link a:hover {
-      text-decoration: underline;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="login-box">
+  <div class="form-box">
     <h2>Login</h2>
-    <form action="/login" method="post">
-      <input type="text" name="username" placeholder="Username" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
-    <div class="signup-link">
-      Don't have an account? <a href="#">Sign up</a>
-    </div>
+    <input type="text" id="loginUsername" placeholder="Username" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <p class="error" id="loginError"></p>
+    <button onclick="validateLogin()">Login</button>
   </div>
+
+  <script>
+    function validateLogin() {
+      const username = document.getElementById("loginUsername").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+      const error = document.getElementById("loginError");
+
+      if (username === "" || password === "") {
+        error.textContent = "Please enter both username and password.";
+      } else {
+        error.textContent = "";
+        alert("Login successful! (demo)");
+        // You can redirect or call backend login API here
+      }
+    }
+  </script>
 
 </body>
 </html>
